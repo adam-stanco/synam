@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SYNAM</title>
+  <link rel="icon" href="avatar.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #07080c;
+      --text: #efe8dc;
+      --accent: #ff5318;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      height: 100%;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Syne, system-ui, sans-serif;
+    }
+
+    body { overflow: hidden; }
+
+    .stage {
+      position: relative;
+      min-height: 100vh;
+      min-height: 100dvh;
+      background: var(--bg) url("hero.jpg") 32% 42% / cover no-repeat;
+    }
+
+    /* Darken the lower third so type stays readable over the rocks. */
+    .stage::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(7, 8, 12, 0.94) 0%,
+        rgba(7, 8, 12, 0.62) 22%,
+        rgba(7, 8, 12, 0.18) 38%,
+        transparent 58%
+      );
+      pointer-events: none;
+    }
+
+    .brand {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 1;
+      padding: 0 6vw 7vh;
+      max-width: min(100%, 52rem);
+    }
+
+    h1 {
+      font-size: clamp(3.4rem, 15vw, 9.25rem);
+      font-weight: 800;
+      letter-spacing: 0.22em;
+      line-height: 0.88;
+      text-transform: uppercase;
+      margin-left: -0.04em;
+    }
+
+    .rule {
+      display: block;
+      width: min(100%, 22rem);
+      height: 1px;
+      background: var(--accent);
+      margin: 1.05rem 0 0.9rem;
+      border: 0;
+    }
+
+    .tag {
+      font-size: clamp(0.62rem, 1.35vw, 0.8rem);
+      font-weight: 400;
+      letter-spacing: 0.46em;
+      text-transform: uppercase;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 1.6rem;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+    }
+
+    a:hover,
+    a:focus-visible {
+      color: var(--accent);
+      outline: none;
+    }
+
+    @media (max-width: 640px) {
+      h1 { letter-spacing: 0.14em; }
+      .tag { letter-spacing: 0.28em; }
+      .brand { padding: 0 7vw 6.5vh; }
+    }
+  </style>
+</head>
+<body>
+  <main class="stage">
+    <div class="brand">
+      <h1>SYNAM</h1>
+      <hr class="rule">
+      <p class="tag">Digital Synthwave Ronin</p>
+      <a href="https://www.youtube.com/@Synam1">YouTube</a>
+    </div>
+  </main>
+</body>
+</html>
