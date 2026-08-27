@@ -1,29 +1,30 @@
 <!DOCTYPE html>
+<!-- Sparse EPK for Synam. Same type language as the landing; no extra socials. -->
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SYNAM</title>
-  <meta name="description" content="Synam. Digital Synthwave Ronin.">
-  <link rel="canonical" href="https://synam-web.vercel.app">
+  <title>Press — SYNAM</title>
+  <meta name="description" content="Synam. Digital Synthwave Ronin. Visual artist.">
+  <link rel="canonical" href="https://synam-web.vercel.app/press">
   <meta name="theme-color" content="#07080c">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="profile">
   <meta property="og:site_name" content="SYNAM">
   <meta property="og:locale" content="en_US">
-  <meta property="og:url" content="https://synam-web.vercel.app">
-  <meta property="og:title" content="SYNAM">
-  <meta property="og:description" content="Synam. Digital Synthwave Ronin.">
+  <meta property="og:url" content="https://synam-web.vercel.app/press">
+  <meta property="og:title" content="Press — SYNAM">
+  <meta property="og:description" content="Synam. Digital Synthwave Ronin. Visual artist.">
   <meta property="og:image" content="https://synam-web.vercel.app/hero.jpg">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1536">
   <meta property="og:image:height" content="1024">
   <meta property="og:image:alt" content="Synam, Digital Synthwave Ronin, standing on a cliff above a night sea.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="SYNAM">
-  <meta name="twitter:description" content="Synam. Digital Synthwave Ronin.">
+  <meta name="twitter:title" content="Press — SYNAM">
+  <meta name="twitter:description" content="Synam. Digital Synthwave Ronin. Visual artist.">
   <meta name="twitter:image" content="https://synam-web.vercel.app/hero.jpg">
-  <link rel="icon" href="avatar.png" type="image/png">
-  <link rel="apple-touch-icon" href="avatar.png">
+  <link rel="icon" href="../avatar.png" type="image/png">
+  <link rel="apple-touch-icon" href="../avatar.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
@@ -53,47 +54,21 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     html, body {
-      height: 100%;
+      min-height: 100%;
       background: var(--bg);
       color: var(--text);
       font-family: Syne, system-ui, sans-serif;
     }
 
-    body { overflow: hidden; }
-
-    .stage {
-      position: relative;
+    .sheet {
       min-height: 100vh;
       min-height: 100dvh;
-      background: var(--bg) url("hero.jpg") 32% 42% / cover no-repeat;
-    }
-
-    /* Darken the lower third so type stays readable over the rocks. */
-    .stage::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        to top,
-        rgba(7, 8, 12, 0.94) 0%,
-        rgba(7, 8, 12, 0.62) 22%,
-        rgba(7, 8, 12, 0.18) 38%,
-        transparent 58%
-      );
-      pointer-events: none;
-    }
-
-    .brand {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      z-index: 1;
-      padding: 0 6vw 7vh;
-      max-width: min(100%, 52rem);
+      padding: 12vh 6vw 8vh;
+      max-width: 38rem;
     }
 
     h1 {
-      font-size: clamp(3.4rem, 15vw, 9.25rem);
+      font-size: clamp(2.4rem, 9vw, 4.6rem);
       font-weight: 800;
       letter-spacing: 0.22em;
       line-height: 0.88;
@@ -117,11 +92,20 @@
       text-transform: uppercase;
     }
 
+    .lede {
+      margin-top: 1.7rem;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      font-weight: 400;
+      max-width: 28rem;
+    }
+
     .links {
       display: flex;
       flex-wrap: wrap;
-      gap: 0 1.75rem;
-      margin-top: 1.6rem;
+      align-items: baseline;
+      gap: 0.85rem 1.75rem;
+      margin-top: 1.7rem;
     }
 
     a {
@@ -133,30 +117,50 @@
       text-transform: uppercase;
     }
 
+    a.mail {
+      text-transform: none;
+      letter-spacing: 0.08em;
+      font-weight: 400;
+    }
+
     a:hover,
     a:focus-visible {
       color: var(--accent);
       outline: none;
     }
 
+    .bio {
+      margin-top: 2.4rem;
+      font-size: 0.92rem;
+      line-height: 1.55;
+      font-weight: 400;
+      max-width: 28rem;
+    }
+
+    .home {
+      display: inline-block;
+      margin-top: 2.8rem;
+    }
+
     @media (max-width: 640px) {
       h1 { letter-spacing: 0.14em; }
       .tag { letter-spacing: 0.28em; }
-      .brand { padding: 0 7vw 6.5vh; }
+      .sheet { padding: 10vh 7vw 7vh; }
     }
   </style>
 </head>
 <body>
-  <main class="stage">
-    <div class="brand">
-      <h1>SYNAM</h1>
-      <hr class="rule">
-      <p class="tag">Digital Synthwave Ronin</p>
-      <nav class="links">
-        <a href="https://www.youtube.com/@Synam1">YouTube</a>
-        <a href="press/">Press</a>
-      </nav>
-    </div>
+  <main class="sheet">
+    <h1>SYNAM</h1>
+    <hr class="rule">
+    <p class="tag">Digital Synthwave Ronin</p>
+    <p class="lede">Synam is a visual artist working in digital cyberpunk and synthwave.</p>
+    <nav class="links">
+      <a href="https://www.youtube.com/@Synam1">YouTube</a>
+      <a class="mail" href="mailto:synamronin@gmail.com">synamronin@gmail.com</a>
+    </nav>
+    <p class="bio">A cyberpunk ronin with spiked white hair, a black respirator, and a glowing orange cybernetic eye and arm. He carries an industrial guitar. Visual artist.</p>
+    <a class="home" href="../">Home</a>
   </main>
 </body>
 </html>
